@@ -1,0 +1,30 @@
+{
+"first":"Sanjana","last":"Tiwari","role":"MERN Stack Web Developer · React · Node.js · MongoDB",
+"sub":"I build full-stack web applications end to end, from clean React interfaces to secure APIs and databases.",
+"about":[
+"I am a MERN Stack developer who enjoys building complete, working web applications using MongoDB, Express.js, React.js and Node.js.",
+"I completed a 3-month Web Development internship at Sachram Tech and an intensive MERN Stack training at Ducat Institute, where I built a full Learning Management System.",
+"I like building RESTful APIs, secure authentication and responsive, user-friendly interfaces. I am a quick learner with strong problem-solving skills, and my college leadership roles taught me teamwork and coordination.",
+"I hold a B.Sc. (Vocational) in Information Technology and am now pursuing my MCA."],
+"tabs":[
+{"k":"Frontend","t":"Interfaces that feel simple.","d":"Responsive, user-friendly UIs with React.js, Next.js, Tailwind CSS and Bootstrap."},
+{"k":"Backend","t":"APIs that hold up.","d":"RESTful APIs with Node.js and Express.js, MongoDB schema design, JWT authentication and MVC architecture."},
+{"k":"Ship","t":"Finish what I start.","d":"Complete projects from idea to working app, built with Git/GitHub version control and a collaborative workflow."}],
+"services":["Full-Stack Web Development (MERN)","React.js & Next.js Interfaces","RESTful API Design","Secure JWT Authentication","MongoDB Database Design","Responsive UI (Tailwind & Bootstrap)","AI API Integration (Google Gemini)","Git & GitHub Workflow"],
+"projects":[
+{"title":"E-Commerce Website","tech":"React · Node.js · Express.js · MongoDB · Bootstrap","link":"","pts":["Full-stack e-commerce platform with a React frontend and a Node.js/Express.js backend, powered by MongoDB with efficient schema design.","RESTful APIs for product management, user authentication and cart operations, with secure JWT-based login and signup.","Real-time Add-to-Cart, Remove-from-Cart and quantity-update features with seamless frontend-backend synchronization.","Advanced search and filtering for large product inventories, following MVC architecture for scalability."]},
+{"title":"AI Chat Tool","tech":"React · Tailwind CSS · Google Gemini API","link":"","pts":["Fully responsive AI chat application using React Hooks and Tailwind CSS with a clean message-bubble UI.","Integrated the Google Gemini API for asynchronous data fetching and intelligent response processing.","Persistent chat history using Local Storage, plus custom logic to parse raw AI output into clean, readable responses."]},
+{"title":"Learning Management System","tech":"React.js · Node.js · Express.js · MongoDB","link":"","pts":["Full-stack LMS for managing courses, users and enrollments with a responsive React.js UI.","User authentication (login/signup) and an admin panel to add, update and delete courses.","Backend APIs integrated with MongoDB, plus a course enrollment and dashboard system."]}],
+"exp":[
+{"t":"Web Development Intern","o":"Sachram Tech","d":"April 2025 – June 2025"},
+{"t":"Web Development Trainee","o":"Ducat Institute · MERN Stack","d":"July 2025 – January 2026"}],
+"edu":[
+{"t":"Master of Computer Applications (MCA)","o":"Uttarakhand Open University","d":"2026 – 2028 (Expected)"},
+{"t":"B.Sc. (Vocational) in Information Technology","o":"Soban Singh Jeena University, Almora","d":"06/2023 – 06/2026"}],
+"skills":"JavaScript, TypeScript, Python, C, HTML, CSS · React.js, Next.js, Node.js, Express.js, Bootstrap, Tailwind CSS · MongoDB · REST APIs, JWT, Git/GitHub, MVC, Responsive Design",
+"quote":"Clean code, clear interfaces, complete projects.",
+"phil":"I focus on building things end to end, learning quickly and shipping work that is finished and usable.",
+"cta":"Let’s build something great together.",
+"email":"sanjanat0609@gmail.com","mobile":"9548554933","linkedin":"https://www.linkedin.com/in/sanjana-tiwari-188754308","github":"https://github.com/SanjanaTiwari06",
+"resume":"/Sanjana_Tiwari_Resume_WebDev.pdf"
+}

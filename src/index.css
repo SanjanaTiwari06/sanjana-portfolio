@@ -1,0 +1,83 @@
+:root{--bg:#f3efe7;--fg:#141210;--mut:#6e675d;--card:#fbf8f2;--line:#dcd5c8;--ac:#e8451e;--glass:rgba(243,239,231,.8);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--fg:#eaeefb;--mut:#8b96b5;--card:#121a30;--line:#222d4a;--ac:#ff6a3d;--glass:rgba(11,16,32,.78);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1020;--fg:#eaeefb;--mut:#8b96b5;--card:#121a30;--line:#222d4a;--ac:#ff6a3d;--glass:rgba(11,16,32,.78);color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:21}
+h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;letter-spacing:-.02em;margin:0;line-height:1}
+em{font-style:italic;color:var(--ac)}
+p{margin:0 0 14px}
+a{color:inherit}
+.mono{font:500 11px/1.4 "JetBrains Mono",ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.w{max-width:1100px;margin:0 auto;padding:0 22px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .w{display:flex;align-items:center;justify-content:space-between;height:60px;gap:14px}
+.nav b{font:400 24px "Instrument Serif",Georgia,serif;text-decoration:none}
+.nav nav{display:flex;gap:22px;align-items:center;font-size:14px}
+.nav nav a{text-decoration:none;color:var(--mut);transition:color .2s}.nav nav a:hover{color:var(--fg)}
+.nav .pill{color:var(--bg);background:var(--fg);padding:7px 16px;border-radius:99px}.nav nav a.pill:hover{color:var(--bg);background:var(--ac)}
+@media(max-width:620px){.nav nav a:not(.pill){display:none}}
+.tg{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--fg);font-size:18px;line-height:1;cursor:pointer;transition:transform .35s,border-color .25s}.tg:hover{transform:rotate(25deg) scale(1.08);border-color:var(--ac)}
+.hero{position:relative;padding:clamp(70px,14vw,150px) 0 70px;overflow:hidden;background:radial-gradient(520px circle at var(--mx,72%) var(--my,25%),rgba(255,90,44,.2),transparent 70%)}
+.hero h1{font-size:clamp(64px,16vw,210px);line-height:.9;margin:26px 0 30px}
+.hero h1 em{display:block;padding-left:.4em}
+.sub{max-width:520px;font-size:18px;color:var(--mut)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.b{display:inline-flex;gap:8px;align-items:center;padding:13px 26px;border-radius:99px;border:1px solid var(--fg);text-decoration:none;font-weight:500;transition:transform .25s,background .25s,color .25s;background:none;color:var(--fg);font-family:inherit;font-size:16px;cursor:pointer}
+.b:hover{transform:translateY(-3px)}
+.b.f{background:var(--ac);border-color:var(--ac);color:#fff}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:18px 0}
+.mq div{display:flex;width:max-content;animation:mq 40s linear infinite}
+.mq span{font:italic 400 clamp(26px,4vw,44px) "Instrument Serif",Georgia,serif;padding-right:40px;white-space:nowrap}
+.mq span::after{content:"✦";color:var(--ac);margin-left:40px;font-style:normal;font-size:.6em}
+@keyframes mq{to{transform:translateX(-50%)}}
+.sec{padding:clamp(70px,10vw,120px) 0;border-bottom:1px solid var(--line)}
+.lab{margin-bottom:22px}
+h2{font-size:clamp(38px,7vw,84px);max-width:900px;margin-bottom:34px}
+.lead{max-width:680px;font-size:18px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.tab{padding:9px 22px;border-radius:99px;border:1px solid var(--line);background:none;color:var(--fg);font:inherit;cursor:pointer;transition:all .25s}
+.tab.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.panel{border:1px solid var(--line);background:var(--card);border-radius:22px;padding:clamp(26px,5vw,56px);animation:fade .5s}
+.panel h3{font-size:clamp(34px,6vw,68px);margin-bottom:18px}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}}
+.row{display:flex;align-items:center;gap:18px;padding:20px 0;border-top:1px solid var(--line);transition:padding .3s,color .3s}
+.row:last-of-type{border-bottom:1px solid var(--line)}
+.row:hover{padding-left:16px;color:var(--ac)}
+.row .nm{flex:1;font:400 clamp(22px,3.6vw,40px) "Instrument Serif",Georgia,serif}
+.row .ar{opacity:0;transition:opacity .3s}.row:hover .ar{opacity:1}
+.chips{display:flex;gap:8px;margin-bottom:26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.it{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--card);cursor:pointer}
+.it .im{overflow:hidden;aspect-ratio:4/5;position:relative}
+.bd{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.65);color:#fff;font:500 11px "JetBrains Mono",ui-monospace,monospace;letter-spacing:.1em;padding:5px 11px;border-radius:99px}
+.it img,.it video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s;background:#000}
+.it:hover img{transform:scale(1.07)}
+.it .t{padding:12px 16px;font-size:14px;display:flex;justify-content:space-between;gap:8px}
+.lb{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:20px}
+.lb img,.lb video{max-width:100%;max-height:90vh;border-radius:12px}
+.lb{align-items:flex-start;overflow:auto}
+.lbx{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);left:14px;z-index:41;padding:9px 18px;background:var(--bg)}
+.lbi{max-width:720px;width:100%;margin:auto;background:var(--card);border-radius:16px;overflow:hidden}
+.lbi video,.lbi img{width:100%;max-height:62vh;border-radius:0;background:#000;object-fit:contain;display:block}
+.cap{padding:22px 26px 28px}.cap h3{font-size:clamp(26px,4vw,38px);line-height:1.05;margin-bottom:16px}.cap p{color:var(--mut);font-size:15px}
+.big{font:italic 400 clamp(30px,5.6vw,72px)/1.1 "Instrument Serif",Georgia,serif;max-width:900px}
+.ct{text-align:center;padding:clamp(90px,14vw,170px) 0 150px}
+.ct h2{margin:0 auto 34px}
+footer{padding:26px 0 90px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+[contenteditable=true]{outline:1px dashed var(--ac);outline-offset:4px;border-radius:4px;min-width:30px}
+.x{border:1px solid var(--line);background:var(--card);color:#e0334a;border-radius:99px;padding:2px 10px;font-size:13px;cursor:pointer}
+.it .x{position:absolute;top:10px;right:10px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--glass);backdrop-filter:blur(14px);border-top:1px solid var(--line);display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30}
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s,transform .9s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.ph{position:relative;max-width:380px;width:100%;margin:36px 0 0;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--card);box-shadow:0 24px 60px rgba(0,0,0,.18)}
+.ph img{width:100%;height:auto;display:block}
+.ph .x{position:absolute;top:12px;right:12px}
+@media(min-width:821px){.hg{display:grid;grid-template-columns:1.35fr .8fr;gap:48px;align-items:center}.hg h1{font-size:clamp(60px,10.5vw,150px)}.ph{margin:0 0 0 auto}}
+
+.xp{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 0;border-top:1px solid var(--line)}
+.xp b{font:400 clamp(20px,3vw,30px) "Instrument Serif",Georgia,serif}.xp span{color:var(--mut);font-size:15px}
+.sk{color:var(--mut);margin:14px 0 26px;line-height:1.8}
